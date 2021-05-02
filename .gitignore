@@ -1,0 +1,7 @@
+.idea
+*.pyc
+pycache
+*.sqlite3
+.DS_Store
+.eslintcache
+.vscode

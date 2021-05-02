@@ -1,0 +1,46 @@
+version: '3'
+
+services:
+  nginx:
+    image: nginx:latest
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - frontend:/frontend
+      - ./nginx:/etc/nginx/conf.d
+      - media-files:/media-files
+      - static-files:/static-files
+      - /etc/letsencrypt:/etc/letsencrypt
+
+
+  backend:
+    image: registry.gitlab.propulsion-home.ch/full-stack/batch-14-november-2020/final-projects/students-tracker/student-tracker:latest
+    restart: always
+    env_file:
+      - ./envs/prod.env
+    command: 'sh /scripts/run.sh'
+    # these volumes pass the data from your computer to the docker container
+    volumes:
+      - frontend:/frontend/build
+      - static-files:/static-files
+      - media-files:/media-files
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:latest
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    env_file:
+      - ./envs/prod.env
+
+
+# these volumes create a directory in your computer so no matter what, they will not be deleted
+
+volumes:
+  media-files:
+  static-files:
+  postgres:
+  frontend:

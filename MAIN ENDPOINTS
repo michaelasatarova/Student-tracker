@@ -1,0 +1,129 @@
+
+student tracker: get grade endpoint for current user
+EDNPOINT: user/<int: user_id>/program/
+
+NestedSerializers: week, lectures
+program{
+    name:FullStack Bootcamp Batch 14
+    description: 'Lorem Ipsum'
+    start_date: 10.11.2020
+    end_date: 9.2.2021
+    week:[
+        {id:1, 
+        name:Week1, 
+        lectures: [
+                    {id:1, title:React, description:'Lorem Ipsum AAbout', Grades:[this is going to be probably array of objects, most important], Expertise:[{I don´´t need it here but can be and the same rest of data ...}]}
+                    {id:2, title:Docker, description:'Lorem Ipsum AAbout', Grades:[], Expertise:[{I don´´t need it here but can be and the same rest of data ...}]}
+                    {id:3, title:Django, description:'Lorem Ipsum AAbout', Grades:[], Expertise:[{I don´´t need it here but can be and the same rest of data ...}]}
+                    {id:4, title:Django, description:'Lorem Ipsum AAbout', Grades:[], Expertise:[{I don´´t need it here but can be and the same rest of data ...}]}
+                    {id:5, title:Django, description:'Lorem Ipsum AAbout', Grades:[], Expertise:[{I don´´t need it here but can be and the same rest of data ...}]}
+                    ], 
+                    
+                }]
+        
+        }
+        {id:1, 
+        name:Week2, 
+        lectures: [
+                    {id:1, title:React, description:'Lorem Ipsum AAbout', Grades:[this is going to be probably array of objects, most important], Expertise:[{I don´´t need it here but can be and the same rest of data ...}]}
+                    {id:2, title:Docker, description:'Lorem Ipsum AAbout', Grades:[], Expertise:[{I don´´t need it here but can be and the same rest of data ...}]}
+                    {id:3, title:Django, description:'Lorem Ipsum AAbout', Grades:[], Expertise:[{I don´´t need it here but can be and the same rest of data ...}]}
+                    {id:4, title:Django, description:'Lorem Ipsum AAbout', Grades:[], Expertise:[{I don´´t need it here but can be and the same rest of data ...}]}
+                    {id:5, title:Django, description:'Lorem Ipsum AAbout', Grades:[], Expertise:[{I don´´t need it here but can be and the same rest of data ...}]}
+                    ], 
+                    
+                }]
+        
+        }
+        {id:1, 
+        name:Week3, 
+        lectures: [
+                    {id:1, title:React, description:'Lorem Ipsum AAbout', Grades:[this is going to be probably array of objects, most important], Expertise:[{I don´´t need it here but can be and the same rest of data ...}]}
+                    {id:2, title:Docker, description:'Lorem Ipsum AAbout', Grades:[], Expertise:[{I don´´t need it here but can be and the same rest of data ...}]}
+                    {id:3, title:Django, description:'Lorem Ipsum AAbout', Grades:[], Expertise:[{I don´´t need it here but can be and the same rest of data ...}]}
+                    {id:4, title:Django, description:'Lorem Ipsum AAbout', Grades:[], Expertise:[{I don´´t need it here but can be and the same rest of data ...}]}
+                    {id:5, title:Django, description:'Lorem Ipsum AAbout', Grades:[], Expertise:[{I don´´t need it here but can be and the same rest of data ...}]}
+                    ], 
+                    
+                }]
+        
+        }
+    ]
+}
+
+get all students with their results for each day ???? OMG
+EDNPOINT: users/program/
+
+NOTE: I am not sure how to connect all atudents with all programs???
+
+NestedSerializers Program
+users.data[
+    {id:1
+    first_name:Michaela
+    last_name: Satarova
+    username: Michaela123
+    email: michaela.satarova.ml@gmail.com
+    country: Slovakia
+    city: Lučenec
+    street: Trebelovce
+    zip_code: 98563
+    profile_picture:null
+    gitlab_profile:url...
+    about:'Lorem ipsum'
+    grades:[I don´t need it here only if we count it like average grade for all bootcamp]
+    expertise:[I don´t need it students doesn´t have it ]
+    program:  /**MOST IMPORTANT IT CAN COME FROM NESTED PROGRAM SERIALIZER**/
+            [
+                {id:1 name: fullStack Batch 14 + (and all data from first step)}
+                {id:2 name: fullStack Batch 15 + (and all data from first step)}
+                {id:3 name: fullStack Batch 16 + (and all data from first step)}
+            ]
+
+
+    },
+
+    {id:2
+    first_name:Marco
+    last_name: Volken
+    username:Marco123
+    email: marco.volken@gmail.com
+    country: Switzerland
+    city: Sant Galen
+    street: null
+    zip_code: 98563
+    profile_picture:null
+    gitlab_profile:url...
+    about:'Lorem ipsum'
+    grades:[{}]
+    expertise:[{}]
+    program:  /**MOST IMPORTANT IT CAN COME FROM NESTED PROGRAM SERIALIZER**/
+            [
+                {id:1 name: fullStack Batch 14 + (and all data from first step)}
+                {id:2 name: fullStack Batch 15 + (and all data from first step)}
+                {id:3 name: fullStack Batch 16 + (and all data from first step)}
+            ]
+
+
+    }
+]
+
+next option:
+data are comming from SOMEWHERE
+NESTED WEEK and USER
+[
+    {
+    id_program:1
+    name:FullStack Bootcamp Batch 14
+    description: 'Lorem Ipsum'
+    start_date: 10.11.2020
+    end_date: 9.2.2021
+    users[
+        {users which was in current program}
+        {users which was in current program}
+        {users which was in current program}
+    ]
+    weeks[
+        {same like option 1}
+        ]
+    }
+]

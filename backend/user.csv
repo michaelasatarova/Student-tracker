@@ -1,0 +1,13 @@
+password,is_superuser,username,is_staff,is_active,date_joined,email,first_name,last_name,status
+abcd,FALSE,michal2,FALSE,TRUE,2021-01-27 10:30:17,michal2@test.com,Michal,Wyszowski,2
+abcd,FALSE,patrick2,FALSE,TRUE,2021-01-28 10:30:17,patrick2@test.com,Patrick,Roth,2
+abcd,FALSE,immanuel2,FALSE,TRUE,2021-01-29 10:30:17,immanuel2@test.com,Immanuel,Jaeggi,2
+abcd,FALSE,michaela2,FALSE,TRUE,2021-01-30 10:30:17,michaela2@test.com,Michaela,Starova,2
+abcd,FALSE,salvatore2,FALSE,TRUE,2021-01-31 10:30:17,salvatore2@test.com,Salvatore,Dinini,2
+abcd,FALSE,Michelle2,FALSE,TRUE,2021-02-01 10:30:17,michelle2@test.com,Michelle,Lundak,2
+abcd,FALSE,salomon2,FALSE,TRUE,2021-02-02 10:30:17,salomon2@test.com,Salomon,Adler,2
+abcd,FALSE,marco2,FALSE,TRUE,2021-02-03 10:30:17,marco2@test.com,Marco,Voken,2
+abcd,FALSE,thomas2,FALSE,TRUE,2021-02-04 10:30:17,thomas2@test.com,Thomas,Massie,2
+abcd,FALSE,hugo2,FALSE,TRUE,2021-02-05 10:30:17,hugo2@test.com,Hugo,Costa,2
+abcd,FALSE,guillaume2,FALSE,TRUE,2021-02-06 10:30:17,guillaume2@test.com,Guillaume,Robert,2
+abcd,FALSE,ruben2,FALSE,TRUE,2021-02-07 10:30:17,ruben2@test.com,Ruben,Villalon,2

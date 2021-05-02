@@ -1,0 +1,15 @@
+OK 42 lectures/                            GET     get all lectures
+OK 43 lectures/<int:pk>/                   GET     get a specific lecture
+OK 44 lectures/<int:pk>/                   DELETE  delete a specific lecture
+OK 45 lectures/<int:pk>/                   PATCH   update a specific lecture
+OK 46 lectures/new/                        POST    create a new lecture
+OK 47 lectures/?search=<search_string>/    GET     search for a lecture
+OK 48 lectures/program/<int:program_id>/   GET     get all lectures of a program
+
+OK 52 programs/                            GET     get all programs
+OK 53 programs/<int:pk>/                   GET     get a specific program
+OK 54 programs/<int:pk>/                   DELETE  delete a specific program
+OK 55 programs/<int:pk>/                   PATCH   update a specific program
+OK 56 programs/new/                        POST    create a new program
+OK 57 programs/?search=<search_string>/    GET     search for a program
+
